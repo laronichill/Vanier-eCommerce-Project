@@ -1,20 +1,20 @@
 <?php
 namespace app\controllers;
 
-class Animal extends \app\core\Controller{
+class Contact extends \app\core\Controller{
 	public function index(){
-		$animalsJSON = file('animalList.txt');
-		$this->view('Animal/index',$animalsJSON);
+		$ContactsJSON = file('MessagesList.txt');
+		$this->view('Contact/index',$ContactsJSON);
 	}
 
 	public function create(){
 		//notice that this controller method uses both the
-		//Animal/create view (for the form) and the Animal/feedback
+		//Contact/create view (for the form) and the Contact/feedback
 		//view to provide information on entered values.
 		//Notice also that these get called at
-		//http://localhost/Animal/create based on what is posted.
+		//http://localhost/Contact/create based on what is posted.
 		if(!isset($_POST['action'])){	//display he view if I don't submit the form
-			$this->view('Animal/create');
+			$this->view('Contact/create');
 		}else{	//process the data
 			//TODO: write the received data into a file			
 			//create a string to store the 'name' and 'dob' data in the file
@@ -22,13 +22,13 @@ class Animal extends \app\core\Controller{
 			//convert to a string
 			$stringToWrite = json_encode($dataToWrite);
 
-			$fileHandle = fopen('animalList.txt','a');
+			$fileHandle = fopen('ContactList.txt','a');
 			flock($fileHandle, LOCK_EX);
 			fwrite($fileHandle, $stringToWrite . "\n");//something missing here... 
 			fclose($fileHandle);
 
-			header('location:/Animal/index');
-//			$this->view('Animal/feedback',$_POST);
+			header('location:/Contact/index');
+//			$this->view('Contact/feedback',$_POST);
 		}
 	}
 
@@ -43,7 +43,7 @@ class Animal extends \app\core\Controller{
 
 		$dataObj = json_decode($jsonData);
 
-		$this->view('Animal/contactInformation', $dataObj);
+		$this->view('Contact/contactInformation', $dataObj);
 
 	}
 
