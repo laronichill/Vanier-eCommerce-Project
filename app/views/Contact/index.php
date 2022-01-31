@@ -9,9 +9,6 @@
 <body>
 	<div class='container'>
 		<?php
-			$this->view('shared/clock');
-		?>
-		<?php
 			$this->view('shared/count_index');
 		?>
 		<h1>All Contacts</h1>
