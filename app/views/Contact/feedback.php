@@ -11,6 +11,9 @@
 		<?php
 			$this->view('shared/clock');
 		?>
+		<?php
+			$this->view('shared/count_index');
+		?>
 		<h1>Feedback of the Contact data</h1>
 		<form method='post' action=''>
 			<label class='form-label'>Contact name:<input type='text' name='name' class='form-control' value='<?=$data['name'] ?>' /></label><br>

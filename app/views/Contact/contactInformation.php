@@ -11,7 +11,9 @@
 		<?php
 			$this->view('shared/clock');
 		?>
-		
+		<?php
+			$this->view('shared/count_index');
+		?>
 
 		<h1>Contact us</h1>
 		<dl>

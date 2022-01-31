@@ -11,7 +11,9 @@
 		<?php
 			$this->view('shared/clock');
 		?>
-
+		<?php
+			$this->view('shared/count_index');
+		?>
 		<h1>All Contacts</h1>
 		<p>This is the list of Contacts.</p>
 		<table>

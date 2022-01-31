@@ -11,7 +11,9 @@
 		<?php
 			$this->view('shared/clock');
 		?>
-
+		<?php
+			$this->view('shared/count_index');
+		?>
 	<h1>Create an Contact</h1>
 	<p>Please enter the details of the Contact that you want to create.</p>
 	<form method='post' action=''>
