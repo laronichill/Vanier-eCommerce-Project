@@ -18,7 +18,7 @@
 				}
 				unset($url[0]);
 			}
-//			$myContact = new \app\controllers\Contact();
+//			$myAnimal = new \app\controllers\Animal();
 			$this->controller = 'app\\controllers\\' . $this->controller;
 			$this->controller = new $this->controller;
 

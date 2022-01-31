@@ -9,8 +9,9 @@
 <body>
 	<div class='container'>
 		<?php
-			$this->view('shared/count_index');
+			$this->view('shared/clock');
 		?>
+
 		<h1>Landing page</h1>
 		<p>Welcome to this Web application. </p>
 		<?php
