@@ -14,10 +14,21 @@
 		<h1>Our Messages</h1>
 		<dl>
 			<?php 
-				//$data is the local name for the data passed into the view
-				foreach ($data as $key => $value) {
-					echo "<dt>$key</dt><dd>$value</dd>";
+				if ($data) {
+					foreach ($data as $line => $string) {
+						for ($i = 0; $i < strlen($string); $i++) { 
+							
+						}
+						// need to use string explode + split + join to make email actually be the good email value and message to be the good message value
+						/*
+							echo "<dt>Email: $string</dt>";
+							echo "<dd style='padding-left: 27.5%;'>$string</dd>";
+						*/
+					}
+				} else {
+					echo "<p>No messages yet to be received</p>";	
 				}
+				
 			?>
 		</dl>
 	</div>

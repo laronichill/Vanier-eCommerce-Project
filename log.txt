@@ -1,9 +1,3 @@
-{"email":"ciobanunicholas@gmail.comdsa","message":"dsad"}
-
-{"email":"123","message":"123"}
-{"email":"123","message":"123"}
-{"email":"123","message":"123"}
-{"email":"","message":""}
-{"email":"123","message":"123"}
-{"email":"123","message":"123"}
-{"email":"123","message":"123123123123"}
+[{"email":"tekkitwar.net@hotmail.com","msg":"123123123'"}]
+[{"email":"tekkitwar.net@hotmail.com","msg":"asedba'"}]
+[{"email":"tekkitwar.net@hotmail.com","msg":"aaa'"}]
