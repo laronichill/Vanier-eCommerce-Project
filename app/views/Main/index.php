@@ -9,14 +9,11 @@
 <body>
 	<div class='container'>
 		<?php
-			$this->view('shared/clock');
-		?>
-
-		<h1>Landing page</h1>
-		<p>Welcome to this Web application. </p>
-		<?php
 			$this->view('shared/navigation');
 		?>
+		<h1>Landing page</h1>
+		<p>Welcome to our dev team's webpage</p>
+		
 	</div>
 </body>
 </html>

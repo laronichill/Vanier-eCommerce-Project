@@ -6,13 +6,12 @@ class Main extends \app\core\Controller{
 		//default controller method according to the routing
 		$this->view('Main/index');
 	}
-
-
+	public function about_us(){
+		//default controller method according to the routing
+		$this->view('Main/about_us');
+	}
 	public function clock(){
 		$clock = new \DateTime();
 		echo json_encode($clock);
 	}
-
-	
-
 }

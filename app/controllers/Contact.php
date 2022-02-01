@@ -7,7 +7,6 @@ public function contactUs(){
 		if(!isset($_POST['action'])){	//display he view if I don't submit the form
 			$this->view('Contact/index');
 			}else{
-		
 
 			$dataToWrite = ['email'=>$_POST['email'], 'message'=>$_POST['message']];
 			
@@ -18,19 +17,22 @@ public function contactUs(){
 				fwrite($fileHandle, $stringToWrite . "\n");
 				fclose($fileHandle);
 
-				header('location:/Contact/read');
+				header('location:/Contact/thankYou');
+
 			}
 	}
 
-
+	public function index(){
+		$this->view('Contact/index');
+	}
 
 	public function read(){
 		$dataObj = file('log.txt');
 
-
 		$this->view('Contact/read', $dataObj);
-
 	}
 
-
+	public function thankYou(){
+		$this->view('Contact/thankYou');
+	}
 }

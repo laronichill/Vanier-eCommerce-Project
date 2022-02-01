@@ -8,19 +8,18 @@
 </head>
 <body>
 	<div class='container'>
-		
-		<h1>Our Messages</h1>
-		<dl>
-		<?php 
-			//$data is the local name for the data passed into the view
-			foreach ($data as $key => $value) {
-				echo "<dt>$key</dt><dd>$value</dd>";
-			}
-		?>
-		</dl>
 		<?php
 			$this->view('shared/navigation');
 		?>
+		<h1>Our Messages</h1>
+		<dl>
+			<?php 
+				//$data is the local name for the data passed into the view
+				foreach ($data as $key => $value) {
+					echo "<dt>$key</dt><dd>$value</dd>";
+				}
+			?>
+		</dl>
 	</div>
 </body>
 </html>

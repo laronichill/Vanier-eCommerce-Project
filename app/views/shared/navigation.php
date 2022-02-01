@@ -1,8 +1,11 @@
-		<ul>
-			<li><a href='/Animal/index'>Animal index</a></li>
-			<li><a href='/Animal/create'>Animal create</a></li>
-			<li><a href='/Animal/contactInformation'>Contact our animal shelter</a></li>
-			<li><a href='/Main/index'>Main index</a></li>
-			<li><a href='/Main/other'>other method in Main</a></li>
-			<li><a href='/Contact/contactUs'>Contact Us</a></li>
-		</ul>
+		<link rel="stylesheet" href="/assets/stylesheets/aside-nav.css">	
+		<aside>
+			<ul>
+				<li><a href='/Main/index'>Landing Page</a></li>
+				<li><a href='/Main/about_us'>About Us</a></li>
+				<li><a href='/Contact/index'>Contact Us</a></li>
+				<li><a href='/Contact/read'>Listing of all messages</a></li>
+			</ul>
+		</aside>
+
+		
