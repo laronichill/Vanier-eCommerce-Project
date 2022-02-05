@@ -8,29 +8,20 @@
 </head>
 <body>
 	<div class='container'>
+		
+		<h1>Our Messages</h1>
+		<dl>
+		<?php 
+			
+				foreach ($data as $logJSON) {
+					$jsonData = json_decode($logJSON);
+					echo "<dt>$jsonData->email</dt><dd>$jsonData->message</dd>";
+				}
+		?>
+		</dl>
 		<?php
 			$this->view('shared/navigation');
 		?>
-		<h1>Our Messages</h1>
-		<dl>
-			<?php 
-				if ($data) {
-					foreach ($data as $line => $string) {
-						for ($i = 0; $i < strlen($string); $i++) { 
-							
-						}
-						// need to use string explode + split + join to make email actually be the good email value and message to be the good message value
-						/*
-							echo "<dt>Email: $string</dt>";
-							echo "<dd style='padding-left: 27.5%;'>$string</dd>";
-						*/
-					}
-				} else {
-					echo "<p>No messages yet to be received</p>";	
-				}
-				
-			?>
-		</dl>
 	</div>
 </body>
 </html>

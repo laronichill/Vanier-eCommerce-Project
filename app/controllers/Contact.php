@@ -4,38 +4,30 @@ namespace app\controllers;
 class Contact extends \app\core\Controller{
 
 public function index(){
-		if(!isset($_POST['action'])){	//display he view if I don't submit the form
+		if(!isset($_POST['action'])){
 			$this->view('Contact/index');
 			}else{
+		
 
-			$dataToWrite[] = ['email'=>$_POST['email'], 'msg'=>$_POST['message']];
+			$dataToWrite = ['email'=>$_POST['email'], 'message'=>$_POST['message']];
+			//var_dump($dataToWrite);
+				$stringToWrite = json_encode($dataToWrite);
 
-				$fileHandle = fopen('log.txt','r+');
+				$fileHandle = fopen('log.txt','a');
 				flock($fileHandle, LOCK_EX);
-				if (filesize("log.txt") > 0) {
-					$inp = fread($fileHandle, filesize("log.txt"));
-					$tempArray[] = json_decode($inp);
-					array_push($tempArray, "\n", $dataToWrite);
-				}
-				$jsonData = json_encode($dataToWrite);
-				fwrite($fileHandle, $jsonData);
+				fwrite($fileHandle, $stringToWrite . "\r\n");
 				fclose($fileHandle);
 
-				header('location:/Contact/thankYou');
+				header('location:/Contact/read');
 			}
 	}
 
+
+
 	public function read(){
-		
-		if (!file_exists('log.txt')) {
-			$this->view('Contact/read', "");
-		} else {
-			$dataObj = file('log.txt');
-			$this->view('Contact/read', $dataObj);
-		}
+		$logJSON = file('log.txt');
+		$this->view('Contact/read', $logJSON);
 	}
 
-	public function thankYou(){
-		$this->view('Contact/thankYou');
-	}
+
 }
