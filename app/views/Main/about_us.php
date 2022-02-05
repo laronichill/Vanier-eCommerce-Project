@@ -13,9 +13,13 @@
 		?>
 		<h1>About Us</h1>
 		<p>Welcome to our about us section. See our team of devs!</p>
+		<figure>
 		<img src="/assets/images/dev-team.jpg" width="25%">
+		<figcaption>That's us</figcaption>
+	</figure>
 		<br><br>
 		<img src="/assets/images/peanuts.jpg" height="60%">
+		<br><br>
 		<?php
 			$this->view('shared/counter');
 		?>
