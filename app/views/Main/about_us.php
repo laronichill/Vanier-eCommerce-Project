@@ -16,6 +16,9 @@
 		<img src="/assets/images/dev-team.jpg" width="25%">
 		<br><br>
 		<img src="/assets/images/peanuts.jpg" height="60%">
+		<?php
+			$this->view('shared/counter');
+		?>
 	</div>
 </body>
 </html>

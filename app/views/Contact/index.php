@@ -8,17 +8,18 @@
 </head>
 <body>
 	<div class='container'>
-		
-
-	<h1>Contact Us</h1>
-	<p>Send us a message!</p>
-	<form method='post' action=''>
-		<label class='form-label'>Email:<input type='text' name='email' class='form-control' /></label><br>
-		<label class='form-label'>Message:<input type='text' name='message' class='form-control' /></label><br>
-		<input type="submit" name='action' value='Submit!' class='form-control' />
-	</form>
 		<?php
 			$this->view('shared/navigation');
+		?>
+		<h1>Contact Us</h1>
+		<p>Send us a message!</p>
+		<form method='post' action=''>
+			<label class='form-label'>Email:<input type='text' name='email' class='form-control' /></label><br>
+			<label class='form-label'>Message:<input type='text' name='message' class='form-control' /></label><br>
+			<input type="submit" name='action' value='Submit!' class='form-control' style="width: 50%;" />
+		</form>
+		<?php
+			$this->view('shared/counter');
 		?>
 	</div>
 </body>

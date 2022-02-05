@@ -8,19 +8,21 @@
 </head>
 <body>
 	<div class='container'>
-		
+		<?php
+			$this->view('shared/navigation');
+		?>
 		<h1>Our Messages</h1>
+		
 		<dl>
 		<?php 
-			
 				foreach ($data as $logJSON) {
-					$jsonData = json_decode($logJSON);
-					echo "<dt>$jsonData->email</dt><dd>$jsonData->message</dd>";
+					$data = json_decode($logJSON);
+					echo "<dt>$data->email</dt><dd>$data->message</dd>";
 				}
 		?>
 		</dl>
 		<?php
-			$this->view('shared/navigation');
+			$this->view('shared/counter');
 		?>
 	</div>
 </body>

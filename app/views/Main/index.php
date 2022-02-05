@@ -13,7 +13,9 @@
 		?>
 		<h1>Landing page</h1>
 		<p>Welcome to our dev team's webpage</p>
-		
+		<?php
+			$this->view('shared/counter');
+		?>
 	</div>
 </body>
 </html>

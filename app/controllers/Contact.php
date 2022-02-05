@@ -22,12 +22,8 @@ public function index(){
 			}
 	}
 
-
-
 	public function read(){
 		$logJSON = file('log.txt');
 		$this->view('Contact/read', $logJSON);
 	}
-
-
 }
