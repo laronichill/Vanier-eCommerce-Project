@@ -15,10 +15,12 @@
 		
 		<dl>
 		<?php 
+			if ($data) {
 				foreach ($data as $logJSON) {
 					$data = json_decode($logJSON);
 					echo "<dt>$data->email</dt><dd>$data->message</dd>";
 				}
+			}
 		?>
 		</dl>
 		<?php

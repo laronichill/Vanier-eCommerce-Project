@@ -23,6 +23,9 @@ public function index(){
 	}
 
 	public function read(){
+		if (!file_exists('log.txt')) {
+			$fh = fopen('log.txt', 'w');
+		}
 		$logJSON = file('log.txt');
 		$this->view('Contact/read', $logJSON);
 	}
